@@ -1,0 +1,104 @@
+body {
+	background-image: linear-gradient(blue, pink);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.container {
+	border-bottom: 0.3em solid white;
+	width: 30em;
+	height: 20em;
+	overflow: hidden;
+	transform: translateY(-10em);
+
+	position: relative;
+}
+
+#car {
+	width: 20%;
+	-webkit-filter: invert(1);
+	filter: invert(1);
+
+	position: absolute;
+	bottom: -9%;
+	right: 40%;
+	z-index: 2;
+}
+
+#mountain {
+	width: 40%;
+
+	-webkit-filter: invert(1);
+	filter: invert(1);
+
+	position: absolute;
+	bottom: -9%;
+	right: -50%;
+	z-index: 1;
+
+	animation-name: mountain;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes mountain {
+	to {
+		right: 120%;
+	}
+}
+
+#grass {
+	width: 5%;
+
+	-webkit-filter: invert(1);
+	filter: invert(1);
+
+	position: absolute;
+	bottom: -1%;
+	z-index: 3;
+
+
+	animation-name: tree;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes grass {
+	from {
+		right: -20%;
+	}
+	to {
+		right: 120%;
+	}
+}
+
+#tree {
+	width: 15%;
+
+	-webkit-filter: invert(1);
+	filter: invert(1);
+
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+
+	animation-name: tree;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes tree {
+	from {
+		right: -20%;
+	}
+	to {
+		right: 120%;
+	}
+}
